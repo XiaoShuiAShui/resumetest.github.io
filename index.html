@@ -7,51 +7,41 @@
     <link rel="stylesheet" href="styles/main.css">
 </head>
 <body>
-    <!-- ================= 导航栏 ================= -->
+    <!-- ========== 导航栏 ========== -->
     <nav class="main-nav">
         <div class="nav-container">
             <!-- 左侧品牌标识 -->
-            <div class="nav-brand" data-lang-cn="我的作品集" data-lang-en="My Portfolio">我的作品集</div>
+            <div class="nav-brand">我的作品集</div>
 
-            <!-- 语言切换按钮 [新增] -->
-            <div class="language-switch">
-                <button id="langToggle">EN</button>
-            </div>
-
-            <!-- 导航链接 -->
+            <!-- 居中导航链接 -->
             <ul class="nav-links">
-                <li><a href="#about" data-lang-cn="个人简介" data-lang-en="About">个人简介</a></li>
-                <li><a href="#education" data-lang-cn="教育信息" data-lang-en="Education">教育信息</a></li>
-                <li><a href="#experience" data-lang-cn="主要经历" data-lang-en="Experience">主要经历</a></li>
-                <li><a href="#portfolio" data-lang-cn="作品集" data-lang-en="Portfolio">作品集</a></li>
+                <li><a href="#about">个人简介</a></li>
+                <li><a href="#education">教育信息</a></li>
+                <li><a href="#experience">主要经历</a></li>
+                <li><a href="#portfolio">作品集</a></li>
             </ul>
 
-            <!-- 简历下载 [修改下载链接] -->
+            <!-- 右侧简历下载 -->
             <div class="resume-dropdown">
-                <button class="dropbtn" data-lang-cn="简历下载 ▼" data-lang-en="Resume ▼">简历下载 ▼</button>
+                <button class="dropbtn" id="resumeBtn">简历下载 ▼</button>
                 <div class="dropdown-content">
-                    <a href="assets/resumes/resume_cn.pdf" download="YourName_CV_CN.pdf" class="resume-item">
-                        <span class="flag-icon">🇨🇳</span>
-                        <span data-lang-cn="中文简历" data-lang-en="Chinese CV">中文简历</span>
+                    <a href="assets/resumes/resume_cn.pdf" download class="resume-item">
+                        <span class="flag-icon">🇨🇳</span> 中文简历
                     </a>
-                    <a href="assets/resumes/resume_en.pdf" download="YourName_CV_EN.pdf" class="resume-item">
-                        <span class="flag-icon">🇺🇸</span>
-                        <span data-lang-cn="英文简历" data-lang-en="English CV">英文简历</span>
+                    <a href="assets/resumes/resume_en.pdf" download class="resume-item">
+                        <span class="flag-icon">🇺🇸</span> 英文简历
                     </a>
                 </div>
             </div>
         </div>
     </nav>
 
-    <!-- ================= 内容区块 ================= -->
+    <!-- ========== 内容区块 ========== -->
     <section id="about" class="section prototype-block">
         <div class="content-wrapper split-layout">
             <div class="text-panel placeholder">
-                <h2 class="section-title" data-lang-cn="个人简介" data-lang-en="About Me">个人简介</h2>
-                <div class="dummy-text" data-lang-cn="此处将放置个人简介文字内容"
-                     data-lang-en="Personal introduction will be displayed here">
-                    此处将放置个人简介文字内容
-                </div>
+                <h2 class="section-title">个人简介</h2>
+                <div class="dummy-text">此处将放置个人简介文字内容</div>
             </div>
             <div class="image-panel placeholder">
                 <div class="dummy-image">头像区域</div>
@@ -59,7 +49,40 @@
         </div>
     </section>
 
-    <!-- 其他区块保持不变，需按同样模式添加data-lang属性 -->
+    <section id="education" class="section prototype-block">
+        <div class="content-wrapper">
+            <h2 class="section-title">教育信息</h2>
+            <div class="timeline-placeholder placeholder">
+                教育时间轴示意图
+                <div class="timeline-mock">
+                    <div class="timeline-item">2015-2018 高中</div>
+                    <div class="timeline-item">2018-2022 本科</div>
+                    <div class="timeline-item">2022-至今 工作</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="experience" class="section prototype-block">
+        <div class="content-wrapper">
+            <h2 class="section-title">主要经历</h2>
+            <div class="card-container">
+                <div class="card-placeholder placeholder">经历卡片1</div>
+                <div class="card-placeholder placeholder">经历卡片2</div>
+                <div class="card-placeholder placeholder">经历卡片3</div>
+            </div>
+        </div>
+    </section>
+
+    <section id="portfolio" class="section prototype-block">
+        <div class="content-wrapper">
+            <h2 class="section-title">作品集</h2>
+            <div class="gallery-container">
+                <!-- 画廊内容占位 -->
+                <div class="gallery-placeholder placeholder">作品画廊区域</div>
+            </div>
+        </div>
+    </section>
 
     <script src="scripts/main.js"></script>
 </body>
