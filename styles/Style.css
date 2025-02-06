@@ -1,0 +1,888 @@
+﻿/* 全局样式 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'PingFang SC', 'Microsoft YaHei', sans-serif;
+    color: #333;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-image: url('../assets/images/background.jpg');  /* 添加背景图片 */
+    background-attachment: fixed;  /* 固定背景，防止滚动时移动 */
+    background-size: cover;  /* 确保背景图片覆盖整个视窗 */
+    background-position: center;  /* 居中背景图片 */
+    background-repeat: no-repeat;  /* 防止背景图片重复 */
+}
+
+/* 导航栏样式 */
+#main-nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #fff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+}
+
+    #main-nav ul {
+        display: flex;
+        list-style: none;
+        gap: 2rem;
+    }
+
+    /* 导航栏样式补充 */
+    #main-nav li {
+        cursor: pointer;
+        padding: 0.5rem 1rem;
+        border-radius: 4px;
+        transition: all 0.3s ease;
+        position: relative;
+    }
+
+        #main-nav li::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 0;
+            height: 2px;
+            background-color: #1e90ff;
+            transition: width 0.3s ease;
+        }
+
+        #main-nav li:hover::after,
+        #main-nav li.active::after {
+            width: 100%;
+        }
+
+        #main-nav li.active {
+            color: #1e90ff;
+        }
+
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 1rem;  /* 控制语言切换按钮和简历下载按钮之间的间距 */
+}
+
+.lang-toggle {
+    padding: 8px 16px;
+    border: 2px solid #333;
+    border-radius: 4px;
+    background: white;
+    cursor: pointer;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+.lang-toggle:hover {
+    background: #333;
+    color: white;
+}
+
+.resume-download {
+    position: relative;
+}
+
+#resumeBtn {
+    padding: 8px 16px;
+    border: 2px solid #333;
+    border-radius: 4px;
+    background: white;
+    cursor: pointer;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+#resumeBtn:hover {
+    background: #333;
+    color: white;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    right: 0;
+    background-color: white;
+    min-width: 160px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+    border-radius: 4px;
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: #333;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+.resume-download:hover .dropdown-content {
+    display: block;
+}
+
+/* 确保section之间有足够空间进行滚动 */
+.full-screen {
+    min-height: 100vh;
+    padding: 80px 2rem 2rem;
+    scroll-margin-top: 80px; /* 确保滚动到正确位置 */
+}
+
+/* 区块通用样式 */
+.full-screen {
+    min-height: 100vh;
+    padding: 80px 2rem 2rem;
+}
+
+.section-title {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 3rem;
+    color: #1e90ff;
+}
+
+/* 占位符样式 */
+.placeholder-rect {
+    background-color: #f0f8ff;
+    border: 2px dashed #1e90ff;
+    padding: 2rem;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 200px;
+}
+
+.placeholder-image {
+    width: 200px;
+    height: 200px;
+    background-color: #f0f8ff;
+    border: 2px dashed #1e90ff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+
+/* 标题样式 */
+.section-title {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 3rem;
+    color: #1e90ff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.title-line {
+    color: #1e90ff;
+    opacity: 0.6;
+    font-weight: 300;
+}
+
+/* 个人信息区样式 */
+.profile-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    gap: 3rem;
+    align-items: flex-start; /* 确保照片在顶部对齐 */
+}
+
+.photo-box {
+    flex-shrink: 0; /* 防止照片被压缩 */
+}
+
+.profile-photo {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid #1e90ff;
+    box-shadow: 0 4px 12px rgba(30, 144, 255, 0.2);
+}
+
+.info-box {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+/* 自我评价板块样式 */
+.self-evaluation {
+    margin-bottom: 2rem;
+}
+
+.evaluation-content {
+    background-color: #f8f9fa;
+    padding: 1.5rem;
+    border-radius: 8px;
+    border-left: 4px solid #1e90ff;
+}
+
+    .evaluation-content p {
+        margin-bottom: 1rem;
+        text-align: justify;
+        line-height: 1.8;
+    }
+
+        .evaluation-content p:last-child {
+            margin-bottom: 0;
+        }
+
+/* 基本信息样式 */
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+}
+
+/* 技能和爱好标签样式 */
+.skill-tags, .hobby-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+}
+
+.tag {
+    background-color: #1e90ff;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+}
+
+    .tag:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 2px 8px rgba(30, 144, 255, 0.3);
+    }
+
+/* 爱好标签特殊样式 */
+.hobby-tags .tag {
+    background-color: #4169e1;
+}
+
+
+/* 教育信息区样式 */
+.education-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+}
+
+/* 学校按钮样式 */
+.school-buttons {
+    display: flex;
+    gap: 4rem;
+    justify-content: center;
+}
+
+.school-btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.school-logo {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #e0e0e0;
+    transition: all 0.3s ease;
+    padding: 10px;
+    background-color: white;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.school-btn.active .school-logo {
+    border-color: #1e90ff;
+    box-shadow: 0 6px 20px rgba(30, 144, 255, 0.2);
+    transform: translateY(-5px);
+}
+
+.school-name {
+    margin-top: 1rem;
+    font-size: 1.1rem;
+    color: #333;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.school-btn.active .school-name {
+    color: #1e90ff;
+}
+.school-duration {
+    display: block;
+    font-size: smaller;
+    margin-top: 5px;
+}
+/* 教育信息展示区域样式更新 */
+/* 教育信息展示区域样式 */
+.education-info-container {
+    width: 100%;
+    position: relative;
+    min-height: 300px; /* 添加最小高度，防止切换时页面跳动 */
+}
+
+.education-info {
+    display: none;
+    opacity: 0;
+    transform: translateY(20px); /* 添加位移效果 */
+    transition: all 0.5s ease; /* 增加过渡时间和效果 */
+    position: absolute;
+    width: 100%;
+    visibility: hidden; /* 添加可见性控制 */
+}
+
+    .education-info.active {
+        display: block;
+        opacity: 1;
+        transform: translateY(0); /* 恢复位置 */
+        position: relative;
+        visibility: visible; /* 显示内容 */
+    }
+.edu-content {
+    background-color: white;
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    border: 1px solid #e8e8e8;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.edu-basic-info {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+}
+
+.edu-courses {
+    width: 100%;
+}
+
+.edu-item {
+    padding: 1.5rem;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+/*    border-left: 4px solid #1e90ff;*/
+    transition: all 0.3s ease;
+}
+
+    .edu-item.full-width {
+        width: 100%;
+    }
+
+    .edu-item:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba(30, 144, 255, 0.1);
+    }
+
+    .edu-item h3 {
+        color: #1e90ff;
+        margin-bottom: 0.5rem;
+        font-size: 1.1rem;
+    }
+
+    .edu-item p {
+        color: #555;
+        line-height: 1.6;
+    }
+
+/* 响应式布局 */
+@media (max-width: 768px) {
+    .edu-basic-info {
+        grid-template-columns: 1fr;
+    }
+
+    .section-title {
+        font-size: 1.5rem;
+        gap: 0.5rem;
+    }
+}
+/* 经历板块样式 */
+.experience-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.exp-section {
+    margin-bottom: 3rem;
+}
+
+.exp-section-title {
+    color: #1e90ff;
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #f0f0f0;
+}
+
+.exp-item {
+    margin-bottom: 1rem;
+    background: #fff;
+    border: 1px solid #e8e8e8;
+    border-radius: 8px;
+}
+
+.exp-header {
+    padding: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
+
+.exp-main-info {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.company {
+    font-weight: 600;
+    color: #333;
+}
+
+.position {
+    color: #666;
+}
+
+.exp-right {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.duration {
+    color: #888;
+}
+
+.toggle-btn {
+    background: none;
+    border: none;
+    color: #1e90ff;
+    cursor: pointer;
+    font-size: 1rem;
+    padding: 0.5rem;
+    transition: transform 0.3s ease;
+}
+
+    .toggle-btn.active {
+        transform: rotate(180deg);
+    }
+
+/* 更新经历内容的样式 */
+.exp-content {
+    padding: 0 1.5rem;
+    border-top: 1px solid #f0f0f0;
+    color: #666;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.3s ease-in-out;
+    opacity: 0;
+}
+
+    .exp-content.active {
+        padding: 1.5rem;
+        max-height: 500px; /* 设置一个足够大的最大高度 */
+        opacity: 1;
+    }
+
+/* 更新箭头按钮样式 */
+.toggle-btn {
+    background: none;
+    border: none;
+    color: #1e90ff;
+    cursor: pointer;
+    font-size: 1rem;
+    padding: 0.5rem;
+    transition: transform 0.3s ease-in-out;
+}
+
+    .toggle-btn.active {
+        transform: rotate(180deg);
+    }
+
+/* 作品集区块样式 */
+.portfolio-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+/* 作品卡片样式 */
+.portfolio-item {
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    aspect-ratio: 4/3;
+    cursor: pointer;
+}
+
+.portfolio-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+/* 遮罩层样式 */
+.portfolio-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    transition: all 0.3s ease;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    padding: 1.5rem;
+}
+
+/* 作品类型标签样式 */
+.portfolio-type {
+    color: white;
+    background: rgba(30, 144, 255, 0.9);
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    transform: translateY(20px);
+    transition: transform 0.3s ease;
+}
+
+/* 悬浮效果 */
+.portfolio-item:hover .portfolio-img {
+    transform: scale(1.05);
+}
+
+.portfolio-item:hover .portfolio-overlay {
+    opacity: 1;
+}
+
+.portfolio-item:hover .portfolio-type {
+    transform: translateY(0);
+}
+
+/* 响应式布局 */
+@media (max-width: 1024px) {
+    .portfolio-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 640px) {
+    .portfolio-grid {
+        grid-template-columns: 1fr;
+    }
+}
+/* 弹窗基础样式 */
+.portfolio-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 1000;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+    .portfolio-modal.active {
+        display: flex;
+        opacity: 1;
+        justify-content: center;
+        align-items: center;
+    }
+
+/* 弹窗内容区域 */
+.modal-content {
+    background: white;
+    width: 90%;
+    max-width: 900px;
+    max-height: 90vh;
+    border-radius: 12px;
+    position: relative;
+    overflow-y: auto;
+    transform: translateY(-20px);
+    transition: transform 0.3s ease;
+}
+
+    .modal-content::-webkit-scrollbar {
+        width: 8px;
+    }
+
+    .modal-content::-webkit-scrollbar-thumb {
+        background-color: #ccc;
+        border-radius: 4px;
+    }
+
+/* 关闭按钮 */
+.modal-close {
+    position: sticky;
+    top: 20px;
+    right: 20px;
+    float: right;
+    background: none;
+    border: none;
+    font-size: 2rem;
+    color: #666;
+    cursor: pointer;
+    z-index: 2;
+}
+
+/* 内容主体 */
+.modal-body {
+    padding: 2rem;
+}
+
+/* 标题样式 */
+.modal-title {
+    color: #1e90ff;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid #f0f0f0;
+}
+
+/* 各个部分的通用样式 */
+.modal-section {
+    margin-bottom: 3rem;
+}
+
+.section-title {
+    color: #333;
+    font-size: 1.4rem;
+    margin-bottom: 1.5rem;
+    padding-left: 1rem;
+    border-left: 4px solid #1e90ff;
+}
+
+.section-content {
+    color: #666;
+    line-height: 1.6;
+    padding: 0 1rem;
+}
+
+/* 功能列表样式 */
+.feature-list {
+    margin-top: 1.5rem;
+}
+
+    .feature-list h4 {
+        color: #333;
+        margin-bottom: 0.8rem;
+    }
+
+    .feature-list ul {
+        list-style: none;
+        padding-left: 1.5rem;
+    }
+
+    .feature-list li {
+        margin-bottom: 0.5rem;
+        position: relative;
+    }
+
+        .feature-list li::before {
+            content: "•";
+            color: #1e90ff;
+            position: absolute;
+            left: -1.5rem;
+        }
+
+/* 链接样式 */
+.links-container {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.project-link {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.8rem 1.5rem;
+    background: #f8f9fa;
+    border-radius: 6px;
+    color: #333;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+    .project-link:hover {
+        background: #1e90ff;
+        color: white;
+        transform: translateY(-2px);
+    }
+
+/* 预览图片网格 */
+.preview-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+}
+
+.preview-item {
+    aspect-ratio: 16/9;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+    .preview-item img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.3s ease;
+    }
+
+    .preview-item:hover img {
+        transform: scale(1.05);
+    }
+
+/* 响应式布局 */
+@media (max-width: 768px) {
+    .preview-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .preview-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* 图片查看器样式 */
+.image-viewer {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    z-index: 2000;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+    .image-viewer.active {
+        display: flex;
+        opacity: 1;
+        justify-content: center;
+        align-items: center;
+    }
+
+.viewer-content {
+    position: relative;
+    width: 90%;
+    height: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.viewer-image {
+    max-width: 90%;
+    max-height: 90vh;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+.viewer-close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 2.5rem;
+    cursor: pointer;
+    z-index: 2001;
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+}
+
+    .viewer-close:hover {
+        opacity: 1;
+    }
+
+.viewer-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.1);
+    border: none;
+    color: white;
+    font-size: 2rem;
+    padding: 1rem 0.8rem;
+    cursor: pointer;
+    opacity: 0.8;
+    transition: all 0.3s ease;
+}
+
+    .viewer-nav:hover {
+        opacity: 1;
+        background: rgba(255, 255, 255, 0.2);
+    }
+
+    .viewer-nav.prev {
+        left: 20px;
+    }
+
+    .viewer-nav.next {
+        right: 20px;
+    }
+
+.viewer-counter {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    font-size: 1rem;
+    opacity: 0.8;
+}
+
+/* 修改预览图片的鼠标样式 */
+.preview-item img {
+    cursor: zoom-in;
+}
