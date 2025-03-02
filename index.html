@@ -1,0 +1,422 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>简历 - 蒋蕊</title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav id="main-nav">
+        <ul>
+            <li data-section="personal" data-i18n="nav-personal">个人信息</li>
+            <li data-section="education" data-i18n="nav-education">教育信息</li>
+            <li data-section="experience" data-i18n="nav-experience">主要经历</li>
+            <li data-section="portfolio" data-i18n="nav-portfolio">作品集</li>
+        </ul>
+        <div class="nav-right">
+            <button id="langToggle" class="lang-toggle">EN/中</button>
+            <div class="resume-download">
+                <button id="resumeBtn" data-i18n="download-resume">下载简历 ▼</button>
+                <div class="dropdown-content">
+                    <a href="assets/resume_cn.pdf" download data-i18n="resume-cn">中文简历</a>
+                    <a href="assets/resume_en.pdf" download data-i18n="resume-en">英文简历</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 个人信息区块 -->
+    <section id="personal" class="full-screen">
+        <div class="section-title">
+            <span class="title-line">——</span>
+            <span data-i18n="nav-personal">个人信息</span>
+            <span class="title-line">——</span>
+        </div>
+        <div class="profile-container">
+            <!-- 左侧区域：头像和基本信息 -->
+            <div class="left-column">
+                <div class="photo-box">
+                    <img src="assets/images/your-photo.jpg" alt="个人照片" class="profile-photo">
+                </div>
+                <!-- 基本信息板块移到这里 -->
+                <div class="basic-info">
+                    <!-- <h2 data-i18n="basic-info-title">基本信息</h2> -->
+                    <div class="info-list">
+                        <p><strong data-i18n="name-label">姓名：</strong>蒋蕊 JIANG RUI</p>
+                        <p><strong data-i18n="gender-label">性别：</strong>女</p>
+                        <p><strong data-i18n="age-label">年龄：</strong>23</p>
+                        <p><strong data-i18n="phone-label">电话：</strong>133-1235-4673</p>
+                        <p><strong data-i18n="email-label">邮箱：</strong>707596717@qq.com</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 右侧区域：自我评价等其他信息 -->
+            <div class="right-column">
+                <div class="self-evaluation">
+                    <!--h2>自我评价</h2-->
+                    <div class="evaluation-content">
+                        <p><strong data-i18n="game-experience-title">游戏专业积累：</strong><span data-i18n="game-experience-content">过往经历中，曾</span><strong data-i18n="game-experience-content2">担任游戏策划实习生，也曾经创办游戏公司</strong><span data-i18n="game-experience-content3">，参与了多个项目的规划与执行，不仅让我深入了解了游戏开发的流程，还培养了我对玩家行为和市场需求敏锐的洞察力，我创办了自己的游戏公司，从零开始构建了完整的项目管理体系，包括但不限于玩法设计、故事线构建、用户体验优化等。提升了我的全局思维和多角度解决问题的能力。</span></p>
+                        <p><strong data-i18n="media-skills-title">媒体传播：</strong><span data-i18n="media-skills-content">数字媒体技术专业，拥有扎实的数字媒体技术的理论及实践基础，熟悉小红书、公众号、微博等平台的推广策略，同时具备图文及视频内容制作能力，能独立完成内容制作、发布、运营工作。</span><strong data-i18n="media-skills-content2">个人小红书账号一个月涨粉1000+。</strong></p>
+                        <p><strong data-i18n="comprehensive-quality-skills-title">综合素质：</strong><span data-i18n="comprehensive-quality-skills-content">硕士首学期以专业</span><strong data-i18n="comprehensive-quality-skills-content2">前20%成绩获三等奖学金</strong><span data-i18n="comprehensive-quality-skills-content3">，具备高效的自我规划、时间管理能力；团队协作中，长期担任课程项目小组组长角色，具有目标拆解、风险预判及跨领域沟通的领导力。</span></p>
+                    </div>
+                </div>
+
+                <!-- 技能板块 -->
+                <div class="skills">
+                    <h2 data-i18n="skills-title">相关技能</h2>
+                    <div class="skill-tags">
+                        <span class="tag">Unity</span>
+                        <span class="tag">C#</span>
+                        <span class="tag">Python</span>
+                        <span class="tag">Photoshop</span>
+                        <span class="tag">Maya</span>
+                        <span class="tag">Aseprite</span>
+                        <span class="tag">Adobe Animate</span>
+                        <span class="tag" data-i18n="skills-jianyin">剪映</span>
+                    </div>
+                </div>
+
+                <!-- 语言板块 -->
+                <div class="languages">
+                    <h2 data-i18n="Language-title">语言</h2>
+                    <div class="language-tags">
+                        <span class="tag">IELTS 7.0</span>
+                        <span class="tag" data-i18n="Language-Putonghua">普通话</span>
+                    </div>
+                </div>
+
+                <!-- 爱好板块 -->
+                <div class="hobbies">
+                    <h2 data-i18n="hobbies-title">个人爱好</h2>
+                    <div class="hobby-tags">
+                        <span class="tag" data-i18n="hobbies-content">画画</span>
+                        <span class="tag">DIY</span>
+                        <span class="tag" data-i18n="hobbies-content2">跳舞</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 教育信息区块 -->
+    <section id="education" class="full-screen">
+        <div class="section-title">
+            <span class="title-line">——</span>
+            <span data-i18n="education-title">教育信息</span>
+            <span class="title-line">——</span>
+        </div>
+        <div class="education-container">
+            <!-- 学校选择按钮 -->
+            <div class="school-buttons">
+                <div class="school-btn active" data-school="hkbu">
+                    <img src="assets/images/hkbu-logo.jpg" alt="香港浸会大学" class="school-logo">
+                    <span class="school-name" data-i18n="school-title">香港浸会大学</span>
+                    <span class="school-duration">2024.09-2025.10</span>
+                </div>
+                <div class="school-btn" data-school="xmu">
+                    <img src="assets/images/xmu-logo.jpg" alt="厦门大学" class="school-logo">
+                    <span class="school-name" data-i18n="school-title2">厦门大学</span>
+                    <span class="school-duration">2019.09-2023.06</span>
+                </div>
+            </div>
+
+            <!-- 学校信息展示区域 -->
+            <div class="education-info-container">
+                <!-- 香港浸会大学信息 -->
+                <div class="education-info active" id="hkbu-info">
+                    <div class="edu-content">
+                        <!-- 第一行：基本信息 -->
+                        <div class="edu-basic-info">
+                            <div class="edu-item">
+                                <h3 data-i18n="degree-label">学位</h3>
+                                <p data-i18n="degree-label2">硕士研究生</p>
+                            </div>
+                            <div class="edu-item">
+                                <h3 data-i18n="major-label">专业名称</h3>
+                                <p data-i18n="major-label2">人工智能和数字媒体</p>
+                            </div>
+                            <div class="edu-item">
+                                <h3 data-i18n="gpa-label">成绩</h3>
+                                <p>GPA 3.53/4.0</p>
+                            </div>
+                        </div>
+                        <!-- 第二行：课程信息 -->
+                        <div class="edu-courses">
+                            <div class="edu-item full-width">
+                                <h3 data-i18n="courses-label">主要课程</h3>
+                                <p data-i18n="courses-content">游戏设计、数字媒体艺术创作、交互设计、视觉传达</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 厦门大学信息 -->
+                <div class="education-info" id="xmu-info"> 
+                    <div class="edu-content">
+                        <!-- 第一行：基本信息 -->
+                        <div class="edu-basic-info">
+                            <div class="edu-item">
+                                <h3 data-i18n="degree-label">学历</h3>
+                                <p data-i18n="degree-label3">本科</p>
+                            </div>
+                            <div class="edu-item">
+                                <h3 data-i18n="major-label">专业名称</h3>
+                                <p data-i18n="major-label3">数字媒体技术</p>
+                            </div>
+                            <div class="edu-item">
+                                <h3 data-i18n="gpa-label">成绩</h3>
+                                <p>GPA 3.23/4.0</p>
+                            </div>
+                        </div>
+                        <!-- 第二行：课程信息 -->
+                        <div class="edu-courses">
+                            <div class="edu-item full-width">
+                                <h3 data-i18n="courses-label">主要课程</h3>
+                                <p data-i18n="courses-content2">游戏设计、人机交互、嵌入式游戏设计与开发、3D动画、增强现实技术与设计</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 主要经历区块 -->
+    <section id="experience" class="full-screen">
+        <div class="section-title">
+            <span class="title-line">——</span>
+            <span data-i18n="experience-title">主要经历</span>
+            <span class="title-line">——</span>
+        </div>
+        <div class="experience-container">
+            <!-- 工作经历 -->
+            <div class="exp-section">
+                <h2 class="exp-section-title" data-i18n="work-experience">工作经历</h2>
+                <div class="exp-item">
+                    <div class="exp-header">
+                        <div class="exp-main-info">
+                            <span class="company" data-i18n="work-experience-content">某某科技有限公司</span>
+                            <span class="position" data-i18n="work-experience-title">游戏策划</span>
+                        </div>
+                        <div class="exp-right">
+                            <span class="duration">2023.05 - 2024.05</span>
+                            <button class="toggle-btn">▼</button>
+                        </div>
+                    </div>
+                    <div class="exp-content">
+                        <p><strong data-i18n="work-experience-head1">小标1：</strong><span data-i18n="work-experience-content1">，参与了多个项目的规划与执行，不仅让我深入了解了游戏开发的流程，还培养了我对玩家行为和市场需求敏锐的洞察力，我创办了自己的游戏公司，从零开始构建了完整的项目管理体系，包括但不限于玩法设计、故事线构建、用户体验优化等。提升了我的全局思维和多角度解决问题的能力。</span></p>
+                        <p><strong data-i18n="work-experience-head2">小标2：</strong><span data-i18n="work-experience-content2">数字媒体技术专业，拥有扎实的数字媒体技术的理论及实践基础，熟悉小红书、公众号、微博等平台的推广策略，同时具备图文及视频内容制作能力，能独立完成内容制作、发布、运营工作。</span></p>
+                        <p><strong data-i18n="work-experience-head3">小标3：</strong><span data-i18n="work-experience-content3">数字媒体技术专业，拥有扎实的数字媒体技术的理论及实践基础，熟悉小红书、公众号、微博等平台的推广策略，同时具备图文及视频内容制作能力，能独立完成内容制作、发布、运营工作。</span></p>
+                        <p><strong data-i18n="work-experience-head4">小标4：</strong><span data-i18n="work-experience-content4">数字媒体技术专业，拥有扎实的数字媒体技术的理论及实践基础，熟悉小红书、公众号、微博等平台的推广策略，同时具备图文及视频内容制作能力，能独立完成内容制作、发布、运营工作。</span></p>
+                    
+                    </div>
+                </div>
+            </div>
+
+            <!-- 实习经历 -->
+            <div class="exp-section">
+                <h2 class="exp-section-title" data-i18n="internship">实习经历</h2>
+                <div class="exp-item">
+                    <div class="exp-header">
+                        <div class="exp-main-info">
+                            <span class="company" data-i18n="internship1-content">某某游戏公司</span>
+                            <span class="position" data-i18n="internship1-title">游戏策划实习生</span>
+                        </div>
+                        <div class="exp-right">
+                            <span class="duration">2023.03 - 2023.04</span>
+                            <button class="toggle-btn">▼</button>
+                        </div>
+                    </div>
+                    <div class="exp-content">
+                        <p><strong data-i18n="internship1-head1">小标1：</strong><span data-i18n="internship1-content1">，参与了多个项目的规划与执行，不仅让我深入了解了游戏开发的流程，还培养了我对玩家行为和市场需求敏锐的洞察力，我创办了自己的游戏公司，从零开始构建了完整的项目管理体系，包括但不限于玩法设计、故事线构建、用户体验优化等。提升了我的全局思维和多角度解决问题的能力。</span></p>
+                        <p><strong data-i18n="internship1-head2">小标2：</strong><span data-i18n="internship1-content2">数字媒体技术专业，拥有扎实的数字媒体技术的理论及实践基础，熟悉小红书、公众号、微博等平台的推广策略，同时具备图文及视频内容制作能力，能独立完成内容制作、发布、运营工作。</span></p>
+                        <p><strong data-i18n="internship1-head3">小标3：</strong><span data-i18n="internship1-content3">数字媒体技术专业，拥有扎实的数字媒体技术的理论及实践基础，熟悉小红书、公众号、微博等平台的推广策略，同时具备图文及视频内容制作能力，能独立完成内容制作、发布、运营工作。</span></p>
+                    </div>
+                </div>
+                <div class="exp-item">
+                    <div class="exp-header">
+                        <div class="exp-main-info">
+                            <span class="company" data-i18n="internship2-content">某某游戏公司</span>
+                            <span class="position" data-i18n="internship2-title">游戏策划实习生</span>
+                        </div>
+                        <div class="exp-right">
+                            <span class="duration">2020.08 - 2020.11</span>
+                            <button class="toggle-btn">▼</button>
+                        </div>
+                    </div>
+                    <div class="exp-content">
+                        <p><strong data-i18n="internship2-head1">小标1：</strong><span data-i18n="internship2-content1">，参与了多个项目的规划与执行，不仅让我深入了解了游戏开发的流程，还培养了我对玩家行为和市场需求敏锐的洞察力，我创办了自己的游戏公司，从零开始构建了完整的项目管理体系，包括但不限于玩法设计、故事线构建、用户体验优化等。提升了我的全局思维和多角度解决问题的能力。</span></p>
+                        <p><strong data-i18n="internship2-head2">小标2：</strong><span data-i18n="internship2-content2">数字媒体技术专业，拥有扎实的数字媒体技术的理论及实践基础，熟悉小红书、公众号、微博等平台的推广策略，同时具备图文及视频内容制作能力，能独立完成内容制作、发布、运营工作。</span></p>
+                        <p><strong data-i18n="internship2-head3">小标3：</strong><span data-i18n="internship2-content3">数字媒体技术专业，拥有扎实的数字媒体技术的理论及实践基础，熟悉小红书、公众号、微博等平台的推广策略，同时具备图文及视频内容制作能力，能独立完成内容制作、发布、运营工作。</span></p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 在校经历 -->
+            <div class="exp-section">
+                <h2 class="exp-section-title" data-i18n="school-experience">在校经历</h2>
+                <div class="exp-item">
+                    <div class="exp-header">
+                        <div class="exp-main-info">
+                            <span class="company" data-i18n="school-experience1-content">学生会</span>
+                            <span class="position" data-i18n="school-experience1-title">部长</span>
+                        </div>
+                        <div class="exp-right">
+                            <span class="duration">2020.11 - 2021.08</span>
+                            <button class="toggle-btn">▼</button>
+                        </div>
+                    </div>
+                    <div class="exp-content">
+                        <p><strong data-i18n="school-experience1-head1">小标1：</strong><span data-i18n="school-experience1-content1">，参与了多个项目的规划与执行，不仅让我深入了解了游戏开发的流程，还培养了我对玩家行为和市场需求敏锐的洞察力，我创办了自己的游戏公司，从零开始构建了完整的项目管理体系，包括但不限于玩法设计、故事线构建、用户体验优化等。提升了我的全局思维和多角度解决问题的能力。</span></p>
+                        <p><strong data-i18n="school-experience1-head2">小标2：</strong><span data-i18n="school-experience1-content2">数字媒体技术专业，拥有扎实的数字媒体技术的理论及实践基础，熟悉小红书、公众号、微博等平台的推广策略，同时具备图文及视频内容制作能力，能独立完成内容制作、发布、运营工作。</span></p>
+                    </div>
+                </div>
+                <div class="exp-item">
+                    <div class="exp-header">
+                        <div class="exp-main-info">
+                            <span class="company" data-i18n="school-experience2-content">学生会</span>
+                            <span class="position" data-i18n="school-experience2-title">部长</span>
+                        </div>
+                        <div class="exp-right">
+                            <span class="duration">2019.12 - 2020.07</span>
+                            <button class="toggle-btn">▼</button>
+                        </div>
+                    </div>
+                    <div class="exp-content">
+                        <p><strong data-i18n="school-experience2-head1">小标1：</strong><span data-i18n="school-experience2-content1">，参与了多个项目的规划与执行，不仅让我深入了解了游戏开发的流程，还培养了我对玩家行为和市场需求敏锐的洞察力，我创办了自己的游戏公司，从零开始构建了完整的项目管理体系，包括但不限于玩法设计、故事线构建、用户体验优化等。提升了我的全局思维和多角度解决问题的能力。</span></p>
+                        <p><strong data-i18n="school-experience2-head2">小标2：</strong><span data-i18n="school-experience2-content2">数字媒体技术专业，拥有扎实的数字媒体技术的理论及实践基础，熟悉小红书、公众号、微博等平台的推广策略，同时具备图文及视频内容制作能力，能独立完成内容制作、发布、运营工作。</span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 作品集区块 -->
+    <section id="portfolio" class="full-screen">
+        <div class="section-title">
+            <span class="title-line">——</span>
+            <span data-i18n="portfolio-title">作品集</span>
+            <span class="title-line">——</span>
+        </div>
+        <div class="portfolio-container">
+            <div class="portfolio-grid">
+                <!-- 作品项目1 -->
+                <div class="portfolio-item" data-portfolio="project1">
+                    <img src="assets/images/portfolio1.png" alt="作品1" class="portfolio-img">
+                    <div class="portfolio-overlay">
+                        <span class="portfolio-type" data-i18n="game-design">游戏开发</span>
+                    </div>
+                </div>
+
+                <!-- 作品项目2 -->
+                <div class="portfolio-item" data-portfolio="project2">
+                    <img src="assets/images/portfolio2.png" alt="作品2" class="portfolio-img">
+                    <div class="portfolio-overlay">
+                        <span class="portfolio-type" data-i18n="game-design">游戏开发</span>
+                    </div>
+                </div>
+
+                <!-- 作品项目3 -->
+                <div class="portfolio-item" data-portfolio="project3">
+                    <img src="assets/images/portfolio3.png" alt="作品3" class="portfolio-img">
+                    <div class="portfolio-overlay">
+                        <span class="portfolio-type" data-i18n="game-design">动画设计</span>
+                    </div>
+                </div>
+                <!-- 作品项目4 -->
+                <div class="portfolio-item" data-portfolio="project4">
+                    <img src="assets/images/portfolio4.png" alt="作品4" class="portfolio-img">
+                    <div class="portfolio-overlay">
+                        <span class="portfolio-type" data-i18n="product-design">动画设计</span>
+                    </div>
+                </div>
+                <!-- 作品项目5 -->
+                <div class="portfolio-item" data-portfolio="project5">
+                    <img src="assets/images/portfolio5.png" alt="作品4" class="portfolio-img">
+                    <div class="portfolio-overlay">
+                        <span class="portfolio-type" data-i18n="product-design">动画设计</span>
+                    </div>
+                </div>
+                <!-- 作品项目6 -->
+                <div class="portfolio-item" data-portfolio="project6">
+                    <img src="assets/images/portfolio6.png" alt="作品4" class="portfolio-img">
+                    <div class="portfolio-overlay">
+                        <span class="portfolio-type" data-i18n="product-design">动画设计</span>
+                    </div>
+                </div>
+
+                <!-- 更多作品项目... -->
+            </div>
+        </div>
+        <!-- 弹窗部分 -->
+        <div class="portfolio-modal" id="portfolioModal">
+            <div class="modal-content">
+                <button class="modal-close">&times;</button>
+                <div class="modal-body">
+                    <!-- 标题部分 -->
+                    <h2 class="modal-title">作品标题</h2>
+
+                    <!-- 作品介绍部分 -->
+                    <div class="modal-section">
+                        <h3 class="section-title" style="text-align: left;">作品介绍</h3>
+                        <div class="section-content">
+                            <p class="modal-description">这里是作品描述...</p>
+                        </div>
+                    </div>
+
+                    <!-- 作品预览部分 -->
+                    <div class="modal-section">
+                        <h3 class="section-title" style="text-align: left;">作品预览</h3>
+                        <div class="preview-grid">
+                            <!-- 预览图片占位符 -->
+                            <div class="preview-item">
+                                <img src="assets/images/preview1.png" alt="预览图1">
+                            </div>
+                            <div class="preview-item">
+                                <img src="assets/images/preview2.png" alt="预览图2">
+                            </div>
+                            <div class="preview-item">
+                                <img src="assets/images/preview3.png" alt="预览图3">
+                            </div>
+                            <div class="preview-item">
+                                <img src="assets/images/preview4.png" alt="预览图4">
+                            </div>
+                            <div class="preview-item">
+                                <img src="assets/images/preview5.png" alt="预览图5">
+                            </div>
+                            <div class="preview-item">
+                                <img src="assets/images/preview6.png" alt="预览图6">
+                            </div>
+                            <div class="preview-item">
+                                <img src="assets/images/preview7.png" alt="预览图7">
+                            </div>
+                            <div class="preview-item">
+                                <img src="assets/images/preview8.png" alt="预览图8">
+                            </div>
+                            <div class="preview-item">
+                                <img src="assets/images/preview9.png" alt="预览图9">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 图片查看器弹窗 -->
+            <div class="image-viewer" id="imageViewer">
+                <button class="viewer-close">&times;</button>
+                <div class="viewer-content">
+                    <button class="viewer-nav prev">❮</button>
+                    <img src="" alt="大图预览" class="viewer-image">
+                    <button class="viewer-nav next">❯</button>
+                </div>
+                <div class="viewer-counter">1 / 1</div>
+            </div>
+        </div>
+    </section>
+
+    <script src="scripts/languages.js"></script>
+    <script src="scripts/script.js"></script>
+</body>
+</html>
